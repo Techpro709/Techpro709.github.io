@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Lockdown
+        </title>
+        <style>
+            #h1text{
+                text-align: center;
+            }
+        </style>
+        <script>
+                    function addItem() {
+             var newItem = document.createElement("div");
+             newItem.innerHTML = document.getElementById("box").value;
+             newItem.onclick = removeItem;
+             document.getElementById("list").appendChild(newItem);
+             saveList();
+            }
+            function removeItem() {
+             document.getElementById("list").removeChild(this);
+             saveList();
+            }
+            function saveList() {
+             localStorage.storedList = document.getElementById("list").innerHTML;
+            }
+            function loadList() {
+             document.getElementById("list").innerHTML = localStorage.storedList;
+             for(var i = 0; i < list.children.length; i++) {
+              list.children[i].onclick = removeItem;
+             }
+            }
+            function redirect() {
+                location.replace("https://techpro709.github.io/Team-M/Password.html")
+            }
+        </script>
+    </head>
+    <body style="background-color: lightgreen">
+
+        <h1 id="h1text">
+            <u>Welcome Admins</u>
+            <p style="font-size: small;">This is a place where Admins come to make final decisions</p>
+        </h1>
+        <button  onclick="redirect()">
+            Back to main web page
+        </button>
+        <div class="app">
+            <p style="font-size:18px; font-style:bold;"><b>decisions</b>
+            </p>
+            <input type="text" id="box" value="" placeholder="Put Case Notes in here "/>
+            <br/>
+            <input type="button" value="Add item" onclick="addItem();"/>
+            <br/>
+             <div id="list"></div>
+           </div>
+           <script>
+            if(localStorage.storedList) {
+             loadList();
+            }
+           </script>
+           <details>
+            <summary><b>Admins, read This.</b></summary>
+            <p>
+                final decisions are to be posted on this website thank you.
+            </p>
+            <p>
+                if you want changes to this website please contact team coder.
+            </p>
+            <p>
+                <b>
+                    All content on this web page is not to be shared other than with your legal guardians.
+                </b>
+            </p>
+          </details>
+    </body>
+    
+</html>

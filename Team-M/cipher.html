@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="index.css">.
+<!--hi-->
+<body onload="reset()">
+
+    <h1 style="color: chartreuse;" ondragleave="c_ciph()">Caesar Cipher Converter</h1>
+
+    <script language="JavaScript">
+        function reset() {
+            document.getElementById("key").value = 0; 
+            
+        }
+        function code() {
+            document.getElementById("key").value = 13; 
+            
+        }
+        function c_ciph() {
+            var f = document.getElementById("key").value;
+            var x = document.getElementById("myTextArea").value;
+            var key1 = Number(f)
+            console.log(key1);
+            var result = '';
+            for (var i = 0, len = x.length; i < len; i++) {
+                if (x[i] == x[i].toUpperCase()) {
+                    var a = x[i].charCodeAt(0);
+                    var e = (((a - 65 + key1) % 26) + 97);
+                    result = result + String.fromCharCode(e).toUpperCase();
+                }
+                else if (x[i] == x[i].toLowerCase()) {
+                    var a = x[i].charCodeAt(0);
+                    var e = (((a - 97 + key1) % 26) + 97);
+                    result = result + String.fromCharCode(e);
+                }
+                else {
+                    result = result + x[i];
+                }
+            }
+            document.getElementById('result').value = result;
+        }
+    </script>
+
+    <div>
+        <textarea id="myTextArea" rows="6" cols="80">
+</textarea>
+    </div class="input">
+
+    <div class="user">
+        <label style="color: chartreuse;" ondragleave="code()">Offset</label>
+        <input type="number" readonly="readonly" id="key" value="text here" />
+
+        <button onclick>Convert</button>
+    </div>
+
+    <div class="resulta">
+        <textarea id="result" rows="6" cols="80">
+  </textarea>
+    </div>
+
+
+        <style>
+        body{
+        background-color: chartreuse;
+        
+        height: 100%;
+
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        }
+
+        h1 {
+        font-family: Papyrus, fantasy;
+        text-align: center;
+        border: 3px yellowgreen;
+        }
+
+        #myTextArea{
+
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        }
+
+        div.input
+        {
+        display: block;
+        text-align: center;
+        }
+
+        input
+        {
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+        }
+
+        div.resulta{
+        display: block;
+        text-align: center;
+        }
+
+        resulta{
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+        }
+
+        div.user{
+        display: block;
+        text-align: center;
+        }
+        </style>
+        </html>

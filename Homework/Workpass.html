@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Password
+        </title>
+        <style>
+            p.answer{
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body style="background-color: rgb(8, 247, 8);">
+        <h1 style="text-align: center;">
+            Restricted access
+        </h1>
+        <script>
+            
+            alert("Restricted Access");
+            alert("Only people who are granted permission are allowed");
+            alert("if guest use password homework");
+        </script>
+        <p>
+            Username:<input placeholder="Username"id="usernameBox" type="text" style="background-color: rgb(0, 255, 242);" />
+            Password:<input placeholder="Password"id="passwordBox" type="password" style="background-color: rgb(0, 255, 242);" />
+        </p>
+        <a onclick="return checkPassword();">
+        <button style="border-radius: 12px; background-color: tomato;">
+            Submit
+        </button>
+        </a>
+        <script>
+            function checkPassword() {
+                alert("Verifying username and password");
+             var password = document.getElementById("passwordBox");
+             var username = document.getElementById("usernameBox");
+             var passwordText = password.value;
+             var usernameText = username.value;
+             if(((passwordText == "microband") && (usernameText == "ztp709")) ||((passwordText == "mom") && (usernameText == "admin") ) || ((passwordText == "Admin709") && (usernameText == "") ) || ((passwordText == "0NET1MEU5E") && (usernameText == "")) || ((passwordText == "5EC0NDPA55W0RD") && (usernameText == ""))) {
+               alert("LoAdInG ...");
+               alert("ID verifed");
+               alert("Redirecting");
+               location.replace("https://techpro709.github.io/Homework/Homework.html")
+               
+             }
+               
+               alert("Username or password incorrect");
+               return false;
+
+              
+
+            }
+
+        </script>
+    
+    </body>
+</html>

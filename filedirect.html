@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+
+        </style>
+        <script>
+
+        </script>
+    </head>
+    <body>
+        <h1 style="text-align: center;" ondragleave="code()">
+            Title page
+        </h1>
+        
+        <script>
+            
+            alert("You are about to be asked for the ID of the site you want to visit. Please make sure you know it when coming to this page");
+            
+        </script>
+        <p>
+            Site ID:<input placeholder="Site"id="textBox" type="text" style="background-color: rgb(0, 255, 242);" />
+        </p>
+        <a onclick="checkText();">
+        <button style="border-radius: 12px; background-color: hsl(249, 86%, 29%);">
+            Submit
+        </button>
+        </a>
+        <script>
+            function code() {
+                location.replace("https://techpro709.github.io/Team-M/cipher2.html")
+            }
+            function checkText() {
+             var text = document.getElementById("textBox");
+             var inputText = text.value;
+             if(inputText == "Team-MIT")  {
+               alert("Redirecting to team web");
+               alert("Greetings from ZTechpro computer");
+               location.replace("https://techpro709.github.io/Team-M/Password.html")
+               }
+               
+               else if(inputText == "homework")  {
+               alert("Redirecting to Z's Homework");
+               alert("I am pretty sure that I did all of the problems correctly");
+               location.replace("https://techpro709.github.io/Homework/Workpass.html")
+               }
+
+               alert("I'm sorry, I cannot find that website in my system.");
+               return false;
+               
+            }
+        </script>
+    
+    </body>
+</html>
