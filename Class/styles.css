@@ -1,0 +1,24 @@
+h1,h2,h3,h4,h5,h6{
+    text-align: center;
+}
+header{
+    background-color: aqua;
+}
+header:hover{
+    background-color: aquamarine;
+}
+.square {
+    height: 300px;
+    width: 1400px;
+    margin: auto;
+    background-color: rgb(255, 94, 94);
+  }
+  button{
+      border-radius: 30px;
+      background-color: red;
+  }
+  a{
+      background-color:lightseagreen;
+      border-radius: 30px;
+      margin-left: 30px;
+  }
