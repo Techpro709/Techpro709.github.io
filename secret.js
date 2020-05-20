@@ -1,7 +1,7 @@
 
 var secret1 = "I love Hafsa";
 var secret2 = "Hafsa is my best friend";
-var secret3 = "";
+var secret3 = "doja cat hot pink";
 var secret4 = "";
 var secret5 = "";
 var secret6 = "";
