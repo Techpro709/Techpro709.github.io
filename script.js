@@ -7,6 +7,7 @@ AOS.init({
 });
 
 const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
 if(urlParams.has('name')){
   const name = urlParams.get('name')
   document.querySelector("body > main > section.pt-20.pb-48 > div > div:nth-child(2) > div:nth-child(3) > div > div > h5").innerText = name;
